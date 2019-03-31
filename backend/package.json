@@ -1,0 +1,19 @@
+{
+  "name": "backend_rest",
+  "version": "1.0.0",
+  "description": "backend part",
+  "main": "index.js",
+  "repository": "https://github.com/manojvicky/react_node.git",
+  "author": "manojvicky <manoj.save.earth@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon server.js --exec babel-node --"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
