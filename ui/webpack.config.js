@@ -35,7 +35,8 @@ const config = {
   // Plugins
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html'
+        template: './src/index.html',
+        title: "manoj"
     })
   ]
   // OPTIONAL
