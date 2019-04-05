@@ -8,7 +8,16 @@ export default class TodoList extends React.Component {
   
   render() {
     let list = this.props.data.map(item => {
-      return <div key={item.id}>{item.title}</div>;
+      return (
+        <div className="listitem" key={item.id}>
+          <div className="listitemdiv"><span className="titlespan">Title :</span>{item.title}</div>
+          <div className="listitemdescription"><div className="titlespan">description :</div>
+            <div className="descriptiondiv">
+              {item.description}
+            </div>
+            </div>
+        </div>
+      );
     });
     return (
       <div className="todolist">

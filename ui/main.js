@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Todo from "./components/Todo";
-import getdata from "./reducer/todo.reducer";
-import loading from "./reducer/loading.reducer";
+import Todo from "./src/components/Todo";
+import getdata from "./src/reducer/todo.reducer";
+import loading from "./src/reducer/loading.reducer";
 import reduxThunk from "redux-thunk";
 import { createStore, combineReducers, applyMiddleware } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from "react-redux";
-import "./styles.css";
+import 'bootstrap/dist/css/bootstrap.css';
+import "./src/styles.css";
 const reducer = combineReducers({
   loading,
   getdata
@@ -20,7 +22,8 @@ const custom = store => next => action => {
   console.groupEnd();
 };
 const arr = [reduxThunk, custom];
-const store = createStore(reducer, applyMiddleware(...arr));
+
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(...arr)));
 function App() {
   return (
     <div className="app">

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // Webpack Configuration
 const config = {
   // Entry
-  entry: './src/main.js',
+  entry: './main.js',
   
   // Output
   output: {
@@ -35,7 +35,7 @@ const config = {
   // Plugins
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './index.html',
         title: "manoj"
     })
   ]
