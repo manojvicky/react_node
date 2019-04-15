@@ -1,6 +1,6 @@
 import TodoList from "./TodoList";
 import { connect } from "react-redux";
-import { gettodo } from "../actions/actions";
+import { gettodo } from "../../actions/actions";
 
 export default connect(
   state => {

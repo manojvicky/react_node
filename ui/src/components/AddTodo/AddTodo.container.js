@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import AddTodo from "./AddTodo";
-import { addtodo } from "../actions/actions";
+import { addtodo } from "../../actions/actions";
 export default connect(
   undefined,
   dispatch => {

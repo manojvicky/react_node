@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Todo from "./src/components/Todo";
+import Todo from "./src/components/Todo/Todo";
 import getdata from "./src/reducer/todo.reducer";
 import loading from "./src/reducer/loading.reducer";
 import reduxThunk from "redux-thunk";

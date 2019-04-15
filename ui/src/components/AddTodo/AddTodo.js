@@ -1,9 +1,6 @@
 import React from "react";
-// import div from 'react-bootstrap/div';
-// import div from 'react-bootstrap/div';
-// import {div, div} from 'react-bootstrap';
 import InputElement from "./inputElement";
-import "../styles.css";
+import "../../styles.css";
 export default class AddTodo extends React.Component{
 constructor(){
   super();
