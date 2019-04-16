@@ -11,14 +11,16 @@
 }
 .header{
   background: #44b35f;
-  height: 50px;
+  height: 75px;
   color: #4b4c4c;
   padding-left: 5%;
   font-size: 36px;
+  line-height: 75px;
+  margin: 0;
 }
 .addtodo {
-  margin: 0px 20px;
-  padding: 20px 0px;
+  height: 100%;
+  width: 100%;
 }
   .loader {
     border: 6px solid #f3f3f3; /* Light grey */
@@ -87,4 +89,12 @@
 }
 .descriptiondiv {
   margin: 7px 0px;
+}
+.addCircle{
+  font-size: 50px;
+  color: #4b4c4c;
+  cursor: pointer;
+  position: fixed;
+  right: 8%;
+  bottom: 8%;
 }
