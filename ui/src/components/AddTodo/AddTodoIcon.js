@@ -31,7 +31,7 @@ class AddTodoIcon extends React.Component{
   }
   render(){
     return (
-      <Fragment>
+      <div className="addTodoModal">
           <Icon className="addCircle" onClick={this.handleClick}>
              add_circle
           </Icon>
@@ -56,7 +56,7 @@ class AddTodoIcon extends React.Component{
             </Button>
           </DialogActions>
         </Dialog>
-      </Fragment>
+      </div>
     );
   }
 };

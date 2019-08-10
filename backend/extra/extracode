@@ -1,0 +1,16 @@
+
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//   console.log("connected");
+//   let todo_instance = new TodoModel({ title:"lunch kar le", description:"lunch with manoj",id:123,important: false });
+//   todo_instance.save(function (err, awe) {
+//     if (err) console.log(err);
+//     console.log('success', awe);
+
+//     TodoModel.find(function (err, todos) {
+//       if (err) return console.error(err);
+//       console.log("all todos", todos);
+//     })
+// });
+// console.log(todo_instance); 
+// });
