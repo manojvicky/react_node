@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import AddTodo from "./AddTodo";
+import AddTodoIcon from "./AddTodoIcon";
 import { addtodo } from "../../actions/actions";
 export default connect(
   undefined,
@@ -8,4 +8,4 @@ export default connect(
       action: payload => dispatch(addtodo(payload))
     };
   }
-)(AddTodo);
+)(AddTodoIcon);

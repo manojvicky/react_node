@@ -1,11 +1,12 @@
 import React from "react";
 import "../../styles.css";
-import {TodoList, AddTodoIcon, Header} from "../";
+import {TodoList, Header} from "../";
+import AddTodo from "../AddTodo/AddTodo.container"
 const Todo = () => {
   return (
     <div className="todo">
       <Header/>
-      <AddTodoIcon/>
+      <AddTodo/>
       <TodoList />
     </div>
   );

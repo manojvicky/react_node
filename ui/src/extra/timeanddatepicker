@@ -1,0 +1,90 @@
+import React, {Fragment} from "react";
+import Icon from '@material-ui/core/Icon';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Grid from '@material-ui/core/Grid';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import "../../styles.css";
+
+import {Dialog, DialogTitle, DialogActions, DialogContent, Button} from '@material-ui/core';
+
+import "../../styles.css";
+class AddTodoIcon extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      modalOpen: false,
+      value: "",
+      selectedDate: new Date()
+    }
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
+  }
+  handleClick(){
+    this.setState({
+      modalOpen: true
+    });
+  }
+  handleClose(){
+    console.log("handle close");
+    if(this.state.modalOpen){
+      this.setState({
+        modalOpen: false
+      });
+    }
+  }
+  handleDateChange(e){
+    console.log("date", e);
+  }
+  render(){
+    return (
+      <div className="addTodoModal">
+          <Icon className="addCircle" onClick={this.handleClick}>
+             add_circle
+          </Icon>
+          <Dialog
+          onClose={this.handleClose}
+          aria-labelledby="customized-dialog-title"
+          open={this.state.modalOpen}
+          disableBackdropClick
+          fullWidth
+        >
+        <div className="TodoTitle">
+          <DialogTitle style={{float:"left"}} id="customized-dialog-title" onClose={this.handleClose}>
+          Add Todo
+          </DialogTitle>
+          <IconButton style={{float: "right", position: "relative", right: "12px",top: "12px"}} aria-label="Close" onClick={this.handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </div>
+        <div className="TodoContent">
+          <DialogContent>
+            <input type="text" placeholder="ToDo" value={this.state.value} onChange={(e)=>this.setState({value: e.target.value})}/>
+          </DialogContent>
+          <div>
+          <DatePicker
+        selected={this.state.selectedDate}
+        onChange={this.handleDateChange}
+        showTimeSelect
+      />
+          </div>
+        </div>
+        <div className="TodoFooter">
+          <DialogActions>
+            <Button onClick={this.handleClose} color="primary">
+              cancel
+            </Button>
+            <Button onClick={this.handleClose} color="primary">
+              save
+            </Button>
+          </DialogActions>
+        </div>
+        </Dialog>
+      </div>
+    );
+  }
+};
+
+export default AddTodoIcon;

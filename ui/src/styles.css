@@ -98,3 +98,31 @@
   right: 8%;
   bottom: 8%;
 }
+
+/* MuiPaper-root-413 MuiPaper-elevation24-439 MuiPaper-rounded-414 MuiDialog-paper-39 MuiDialog-paperScrollPaper-40 MuiDialog-paperWidthSm-43{
+  width: 80%;
+  height: 50%;
+} */
+/* .MuiPaper-root-53 {
+  background-color: #fff;
+  width: 80% !important;
+  height: 50% !important;
+} */
+
+.TodoInput{
+  padding: 5px 10px;
+}
+.TodoCheckedBox {
+  display: inline-block;
+}
+.Srow {
+  justify-content: space-between;
+    display: flex;
+    margin-top: 15px;
+}
+.MuiDialogContent-root-135:first-child {
+  padding-top: 0px !important;
+}
+.addTodoDiv {
+  margin-bottom: 10px;
+}

@@ -7,7 +7,7 @@ export const initalState = {
     switch (type) {
       case "ADDTODO":
         return {
-          data: [...state.data, payload]
+          data: payload
         };
       case "GETTODO":
         return {

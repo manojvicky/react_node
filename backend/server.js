@@ -26,6 +26,7 @@ console.log("connected");
 });
 
 app.get('/api/todos', (req, res) => {
+  
     TodoModel.find()
       .then(todos => {
         res.status(200).send({
@@ -36,6 +37,33 @@ app.get('/api/todos', (req, res) => {
       }).catch(error => {
         res.status(401).send({message:"someting went wrong. Please try again"})
       });
+});
+
+app.post('/api/todos', (req, res) => {
+  let {title, description, important, endDay} = req.body;
+  let newTodo = new TodoModel({
+      title,
+      description,
+      important,
+      endDay
+  })
+  newTodo.save()
+  .then(()=>{
+    TodoModel.find()
+      .then(todos => {
+        res.status(200).send({
+          success: 'true',
+          message: 'todos retrieved successfully',
+          todos
+        })
+      }).catch(error => {
+        res.status(401).send({message:"someting went wrong. Please try again"})
+      });
+  })
+  .catch((error)=>{
+    console.log("post error", error);
+    res.status(401).send({message:"someting went wrong. Please try again"})
+  });
 });
 
 const PORT = 5000;

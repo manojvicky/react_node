@@ -24,6 +24,7 @@ export function gettodo() {
 }
 
 export function addtodo(payload) {
+  console.log("payload in addtodo", payload);
   return function(dispatch) {
     dispatch({ type: "LOADING" });
     post(url, payload)
@@ -35,7 +36,8 @@ export function addtodo(payload) {
         }
       })
       .then(data => {
-        dispatch({ type: "ADDTODO", payload: data.todo });
+        console.log('data in add todo', data);
+        dispatch({ type: "ADDTODO", payload: data.todos });
         dispatch({ type: "LOADING" });
       })
       .catch(err => {
